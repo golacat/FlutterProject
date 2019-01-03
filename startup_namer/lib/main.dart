@@ -40,26 +40,53 @@ class RandomWordsState extends State<RandomWords> {
   }
 
   Widget _buildRow(WordPair pair) {
-    final bool alreadySaved = _saved.contains(pair);
-    return ListTile(
-      title: Text(
-        pair.asPascalCase,
-        style: _biggerFont,
-      ),
-      trailing: new Icon(
-        alreadySaved ? Icons.favorite : Icons.favorite_border,
-        color: alreadySaved ? Colors.red : null,
-      ),
-      onTap: () {
-        setState(() {
-          if (alreadySaved) {
-            _saved.remove(pair);
-          } else {
-            _saved.add(pair);
-          }
-        });
-      },
-    );
+    // final bool alreadySaved = _saved.contains(pair);
+    return Row(
+      children: <Widget>[
+        Expanded(
+          flex: 1,
+          child: FittedBox(
+            child: const FlutterLogo()
+            )
+          ),
+        Expanded(
+          flex: 2,
+          child: FittedBox(
+            child: const FlutterLogo()
+            )
+          ),
+        Expanded(
+          flex: 3,
+          child: FittedBox(
+            child: const FlutterLogo()
+            )
+          )
+        ]
+      );
+    // return ListTile(
+    //   leading: Text("leading"),
+    //   title: Text(
+    //     pair.asPascalCase,
+    //     style: _biggerFont,
+    //   ),
+    //   subtitle: Text("subtitle"),
+    //   trailing: new Icon(
+    //     alreadySaved ? Icons.favorite : Icons.favorite_border,
+    //     color: alreadySaved ? Colors.red : null,
+    //   ),
+    //   isThreeLine: false,
+    //   dense: false,
+    //   enabled: true,
+    //   onTap: () {
+    //     setState(() {
+    //       if (alreadySaved) {
+    //         _saved.remove(pair);
+    //       } else {
+    //         _saved.add(pair);
+    //       }
+    //     });
+    //   },
+    // );
   }
 
   Widget _buildSuggetions() {
