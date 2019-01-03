@@ -41,28 +41,53 @@ class RandomWordsState extends State<RandomWords> {
 
   Widget _buildRow(WordPair pair) {
     // final bool alreadySaved = _saved.contains(pair);
-    return Row(
+    return Wrap( // Row(
+      spacing: 20,
+      runSpacing: 10,
+      alignment: WrapAlignment.start,
       children: <Widget>[
-        Expanded(
-          flex: 1,
-          child: FittedBox(
-            child: const FlutterLogo()
-            )
+        Chip(
+          avatar: CircleAvatar(
+            child: Text("AB")
+            ),
+          label: Text("123456789012345")
           ),
-        Expanded(
-          flex: 2,
-          child: FittedBox(
-            child: const FlutterLogo()
-            )
+        Chip(
+          avatar: CircleAvatar(
+            child: Text("AB")
+            ),
+          label: Text("123456789012345")
           ),
-        Expanded(
-          flex: 3,
-          child: FittedBox(
-            child: const FlutterLogo()
-            )
-          )
+        Chip(
+          avatar: CircleAvatar(
+            child: Text("AB")
+            ),
+          label: Text("123456789012345")
+          ),
         ]
-      );
+      );    
+    // return Row(
+    //   children: <Widget>[
+    //     Expanded(
+    //       flex: 1,
+    //       child: FittedBox(
+    //         child: const FlutterLogo()
+    //         )
+    //       ),
+    //     Expanded(
+    //       flex: 2,
+    //       child: FittedBox(
+    //         child: const FlutterLogo()
+    //         )
+    //       ),
+    //     Expanded(
+    //       flex: 3,
+    //       child: FittedBox(
+    //         child: const FlutterLogo()
+    //         )
+    //       )
+    //     ]
+    //   );
     // return ListTile(
     //   leading: Text("leading"),
     //   title: Text(
